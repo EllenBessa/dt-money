@@ -1,0 +1,29 @@
+{
+  "extends": ["@rocketseat/eslint-config/react"],
+  "plugins": ["prettier", "eslint-plugin-import-helpers"],
+  "rules": {
+    "array-callback-return": "off",
+    "no-useless-constructor": "off",
+    "no-unused-vars": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "arrowParens": "always",
+        "semi": true,
+        "endOfLine": "auto",
+        "trailingComma": "none"
+      }
+    ]
+  }
+}
